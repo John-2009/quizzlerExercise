@@ -61,7 +61,14 @@ class _QuizPageState extends State<QuizPage> {
             child: TextButton(
               onPressed: () {
                 setState(() {
-                  questionNumber = Random().nextInt(3);
+                  questionNumber = Random().nextInt(17);
+                  bool correctAnswer =
+                      quizBrain.questionBank[questionNumber].questionAnswer;
+                  if (correctAnswer == false) {
+                    print('user got it right!');
+                  } else {
+                    print('user got it wrong.');
+                  }
                   //The user picked false.
                 });
                 //The user picked true.
@@ -87,7 +94,14 @@ class _QuizPageState extends State<QuizPage> {
             child: TextButton(
               onPressed: () {
                 setState(() {
-                  questionNumber = Random().nextInt(3);
+                  questionNumber = Random().nextInt(17);
+                  bool correctAnswer =
+                      quizBrain.questionBank[questionNumber].questionAnswer;
+                  if (correctAnswer == false) {
+                    print('user got it right!');
+                  } else {
+                    print('user got it wrong.');
+                  }
                   //The user picked false.
                 });
               },
